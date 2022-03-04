@@ -86,6 +86,9 @@ function showCurrent(response) {
   let buttonDisplay = document.querySelector("#currentLocation");
   buttonDisplay.innerHTML = message;
 }
-navigator.geolocation.getCurrentPosition(showLocation);
+function askLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(showLocation);
+}
 let currentButton = document.querySelector(".current-button");
-currentButton.addEventListener("click", showCurrent);
+currentButton.addEventListener("click", askLocation, showCurrent);
