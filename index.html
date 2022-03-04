@@ -4,13 +4,117 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lesson 5</title>
-  </head>
-  <body>
-    <h1>Lesson 5 - Hosting with Netlify!</h1>
-    <img
-      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATcAAACiCAMAAAATIHpEAAABGlBMVEX///8NHiUAAAD//v////1CpL0AAAYztLoADRh2foC8v8AAFh44rro5rbwMHyVGUFN9g4cADBRAprwwtrk8qb3Y29wqvLnk5ubQ1NPr7e2FiowAABAyQEMov7i0t7cAFh9Gob6jqKojw7cAGiA2srxJnb+anqHy+vsturo8RUliaWoTIikACBGQlZUos7eaoKLDxsek2NuT0NMgLTF7xcro9fe23uKYydTO5upkr73A7uXM7uyH1tAAwbFk0Mao5d5zzshXXWJYxsRFvrrF6+pPusJlx8iY2dVdvcVsc3Tf7vNNVlpVt780PkdfZGdxwMaGytGs198WpbRzvMi+3eNstMeIwdIUl7SeyNOKwdVpr8q11N84k7taocE+NdtrAAARSUlEQVR4nO2cCUPaSBvHh2Q4bAIqgoqoSEGDF/UK4trdbV2rFU/Q3r7f/2u8zzNHMgkgoWh1t/PfbgvJJJn8eK6ZDBCipaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpfUEos/dgX+fTOL+cehodMPJpOTtn6///PMP4KcVXZT8Bdhev/7z7+fuyb9I1DSdv14L/Y22pxVFJnHA2oTA4rSrRhP1rQ20oF01mswANrA4VyfVKHL+WgAr83UKjqpddYBMhm1BFaHui49x9Kf6V8hvvXo1W3iEezOpGcL2+tAk7158jKNkcU4oH/GQ2YnLhGHAHyOzNnIggpQQsLWF128JPQaQLx0cGTNSTMar4Hand/OtVSNViXGV5kfkBk56NB3iBlfGf2unI535qUXJWIpDSLxSIGy9312fHyuER4uUzBlWzJM1TuhI4ChiC4I7hgEX/ju98KLB9eJGyaZRqsSsjY0u110zYoqs89G4AbbaNMrH9o6Yh0gSt75kcD3tbdbI4JaMtRtqPZeIBbi9H4EbNalzwgEp5BxKFiQ3BPcCCjkqFNzYzc3fFDNmA41nA9aWiZWuRrgvSp1/FmrTqsBLCXnrv39hMU4tH3pyGy8JNInFwIHjXmyzEkaqlDJ+nhvrw+FJTSW3MP2O0MMFBWTNpc9eyBU2V7jK6tae3N5LPsEcm+fuCypeLs4UCoWZ/M/bGzd893QB0IkgV5t2TfJPwALBbX+uwnw8zRhFpsSuerM949tKUXIrqGfYnJRmODdybyj5558Gm909PvJiHNRs24qx1WpHhLSeO8TNGLEMqjI/kFuhwg3OGAucYbwk0sX5iF0BC3KO6lNT0zsumlMLQlpt+ujoBAZYkBMUbrDl5PSZ5+NmRFC35tWtveu3/K5R3CgaZ4ETOMJLM6Fs8ROi5Kg+PVWbmqqfHOM75/TUgX9gs2ptNcwLR/XtUa82mmZEdIrCDQrflc1yqHoryPC2MbLrMGubmgIywGebuSvFv/6oT9cUbLVj4tSm6s+bVYfjxhSMyNJgK/NkRDlHySmuGv5XeyuDmIP5tSY0Vau71IV/kjvPmRx+gltQeeno4yP1A8rdD9UpT4zPkdhF3tU9aiiHHNenklP1nWdMDi+EGwzlPyAL3+BY/Gf2BKVJ8129jij5XkJO60kBLorF8TbdY5iI1KnaVL6Q3CqPwM27hygdCrSBUcKHejKZnArKoV5j97RWn+L2dkLIHjAGRQWnXgi7/Kq88qa8NfNwTwuzi29W3iyyZspFxBGFLm4mGcxNOY+Mb6VRyhDAlqwmhTxs9bf82tsNVg4fH9VwX32HEgY5Wf/YQG6DyG2Oc/EOzp4ljARWrIaxvlnod8zM5q7BmiUMwxoLVApn/GxyELB+zt6+Zz3tyW1mVXTgjG/aYu9XQycYP6ekLFuuzoT6s9VjDw6aTj1qPrckFmqA9LReq++whzKtd2B09QZxoHW9utdin/7AOm6iaJUsyyoV4Toz44YcZYOLbBhvupvDRzSzZmxU0J4yzKgmjfkt31ZWU3g2OdkYy+A7a3KX9OWWN1gTa3KcdZe8MqzuE1jWOmvJ3xjlYJfIWZE3Sq0HOkpIt71BBHNM5+SkjsVJvXbSZCXd9tSJQ5ypenKbzaA2r3fooLAwkUIAmZhBSNmw2EtPRq+56RWFrSBsnHntvGG6uG3Gt/IgNzUDALdEjxNkKuvQnhshvBkPxbF1YZ3FTWWjc0poSzE4Ti9Zh+J3z7O+ukSFkzfOsQm0ncaHarWzQwYE1AlxKwaZM3C+JtDpxFhX+/OuVnAnxVUZEELcuKJwK4nMGeImPxrkVpZD2UQwgnhTTobnpnD7Fx2wpW07RK6+ByGtrqaKavLGxU/MZAWxu1Ot2tAOwT0Y4ibEAHpyjF09hMTYCrZ2LkPGxttnJi8pz0G97I1xo5HsrR+3GJ5hJiEuF5py2hRnVbIQdS7SNngk/VitVgP25lAnqYY9ZoM4vAJu5uFJp5q04ZA0WtyD80qSW0xGYj+24GxhcBaWrvrYKmoYihWFq46nKhWr4m+38K01DDejgoeoJwCV1tEczkUfratAr+alm/rxGLBVbXuPmC5y89FVG4Ts1IOem6yftHi+N2lzDw6DP2n4e+fBJ5ceNzSOlGHsrl6mjFRGGpNqcHDf0lNiKWN+7exq1491Yvrsap5J3vc6fzsendvWLjvCCp5gfhXbL0qHLKqhZ0ZxU17SAjYbVW1Q0uhUuRila0IPVWzVOropBjcTHBU75WxXO+xgG121f4jzuWUqxtkW456f8CapU/48BQVbEI5SMSZ4KMmPGSKRVKwet6LUvWY0bqL+zofrN7a5IPsaCB8y7Fmr4kropGmb2Y1rkutkVZKr1qHw+BAIdx9EBsULu9cNrIlp47qDh9u5nSj2BjnLr8S2pGFlSj43c1f6SWoW7xA/IT8eJcrixrFUEXUvPvQUzxkichMnULKF+qDiincgk1Lz1XlJ7QB0yknbkts1NR2bRSwGDuLYTpUNCqqsWLs+xlzgtC9wVL9ThSN2MEeQ1k0aZHf2ad86TnIDbAV+M6ybbwS4jJ+jSFkiMtRZn0U5NlDmdoeYf+s9Eu0zPn0l/WDDd6GCDBUiy1LAlkuz+4Ywta14avUjpS0GDTNDNSkZ4S4Hm9mA2L5uMndtX3Rydm6/bx0nuGUyRmAC3/F647vEbiVgWRIGGAEjp0wxDjGuH4qbnM5Ur/Uq6NLopDk7LVRNtyjZs4XBuZR85K9s+wOfOb/jGz6iIdosJ+Q6F2wXbYK7sjruQW6ToXn8NW79maIHaUvCCORY6pVPStX5VNy8E6T83p7Jcy7yrHCQS3sCZ72AepbxqNrbrJ4DaNXk9SEb1m9X62m2Aaq6a54NEF7H3nfZ/v30l3afOk76aSK0ZGNzQ3iER2NsksMolkOnEHao3OOTcdsSaagSk+c014UXFLmbNnI5BRyggzqs2UEcF4S6aGmdKhuXQs0h7RCR0gs7LciBm9u52zuKEyqNA2c4bjJL+Xa4W+EwjPB4/4yXLRnj6bmZXidkiJXWXrri97cD2OCP56npziGhNxjqWoR+BDQfIWniaOqjbXPjg787x8SR0MRhuY7ddnmsH4rbYiLEzastLsOhUuYQP4U8GTcyJ0pLzw3m/P7z+3Oa7ZuDXI6xY5ZnwxAhjQMnut2x99hAHnJnx+ZxjrlmxyXNjgJNoMvd9H8yGJmb3JDqeqApSxG/qno6bvnwzN6liMMp1QsowNsDk8Gbt3N78N5xHfDSbWZBhzAoSFdtVQ5tpO0AMqZ45+JuVG7yAbG1Vg5pzI/MT87NG1QJ45ZekFqTDVyXivIZ4N2iz3Zck7K6ljvoBVS11bQCLQ2hj+yETE2Ay7VH5eYtgCkVQ5I7/ITxhNw2i4GLyTDs2Tp109nbdhMXLSA86h7vNOSiCnRQu5O2Q0qnIZ3e9uCWzUHlOyq3q14zRKoyxZVfwM0rqXm5dl4SJZ1/FSe9hPfN4alB3XRvOxDxgkGMqU1pl6lhhMwOrHsHc3s/mJtXsjwdN+otVGJpvTDJ6xIYeMmFiDg8zWbBWLK57KebRtPxH+y4kF1leRKwrmPq5Lq4wfH7/efLI3M7H8RNKfWekpv0TBZN5WAB3NS/QeocwE3Lu79xfKQY8vYuAF6gxIMASFu5sBDbAzO+0e1NWWyb6alfwQ2flfFdJcwEYrBQWQ80MZ2DuLj7tkO8aQH0OXzJkq1neZhyHXLX6Qa3H2UeKbqfWpOTqZ4yfgk37wOEMpuKsUJqItACsuYBGswtmx5y2N9YtV3sNFosPcBbt7kNyRbiXdZuuCZph6Flc/t9mQ3FTY4Di4uFvvol3GTPEltysNC9aglddZ8/5bvp3PJJU0pvkcjt/h2bB6EM3v51DrGazkEAWhyd9OHnMlG5zUluPZ4O+mSenht1ZAE+Rub4ILoSnM03TfySqYP+efcJzM4xnabbasOwAYeuuVynA/CarjA8zCQQ/e+yHrRslqWEhxWRG/XHC2fEW/YckHLwk3Ija3JShIiJVBjC9LINp40AslC+7XMS9Djgi1ipiDWsMILfP2DA0NjQSQc+d45qb97TtsTglRpDrA8Z3k+9JJoop0KD/KAwOWSzt+CraEZpcEhyI6xKFrYdjIFEGkKrsc/cNY5OOui5c0Ru1JF5IfxssIeelBslcoCyHpNW3esmIcYtQaCCYHaQ5e4HdXDOr1By4jXliVac22n++Bwf5KRkCG7egEE+/wjcSlBPzM0b8jFhvd3TOABcfKlNaJvHrGzuhtBWNp4LKnuNY7J29oDnCyru5tH81J/cN8ITlzBqPA9c6Wn9NPydkD5uSjBLHsAo4UtW6o6Q/VxWUY5lTkI+s5df4p8AXrQFbNG50XXPU2dDH8eKUQwsuPKW56oPBx+PGwmsKuhh//KC1EEvjTMBoXjWwbfZALlcvM3aQD7ARvEvX/uyUhWdGyl7H7MS4nD0dwY7NlYViyvIp6rGDBGPdB+V25z/sHxAYQQV7VJcKhu/paSlUmO4msRhxEBL8S/7g9PekNy8uS/8toE/TbgYY6dIXfrfInWkaZbEigSe7B+NW151VCO8HE6RSeiByg1t60c8rnCD1y5x/QZfB4c2piH8FLsrF0CkjLXybD4/uzg2majwTcX3/tFyeU0mtbtZLm9eFcijcvMeSfImD90oJgdhTIwMOO6tDw635Ahtir1LUTLpsNwIeqofWVL47W0jkfKWMKFPyoab3kKSygau3nxsbt63k3o8XgsJyxEPW3zpEySKuKrsJ0ra0ty+Rv6u5lDcyKbqIGwSxFv6FUgWAUeSj8AejRtlX2QKnLs/NlMFl2WFyV0A3DdKPvNXEVMC01DcKHljKMu8MhIfrrlUh9YmWVMjN95b1PVID21VtGrJjP1+YDyiMqVytTxOXG1KPnFb/DrEOvLh7I2QLWsjvLgQ1yetFoLdL2xUlP2Pz81fe7nYp4UQJnOwuGUwuaUlZndQ0jmKm2I6xZ3ZL+2Bi3oVDckNBiITRlGZwsSbS5RCMQYuP5tQivrH5yZnLzOJh91U9Mc8WGJiqCD2N+Oe635xqcv29Xty1VtjhlDoc1uU2ye6DinM7RrFlIVPzi1rMmGslnuZ98yVsWEhYCtVlDHoTJ7U/5DyclNgaOFtXe1nAmIaNbT0so+ghvy0vOSpSem+fB1foqQJ/y5HTwn89maFQp9bQW7vqo7w9Pny2fhuxopdno8t9i2f8pvv52OV3dW1lS2z78UcuSkwWOq9VZVY9xP+uHsLZ9oUcHEcNsg33yGdwq72wBmQR9dD1xvme7DD9FuO5Db6/GRLj7MDuLhg9RkG+OLl8mdIE4htiIs/hn719YRYXsioy2gHCMaqvsUt3xH6Q7yEsPb9y49fbmzPpPkKqxzDPxj0gNBVkRPH5UDxwV4uQzoFduZz/5TDrxEf8YG9DVM6UCXGQVRzOTeXtIbLpP9miTnUye7v8zwgajqf7oV3Lv+g5I6B8yd7//uSX2SIMGWvCsuRe2AGQjtDT13+Tuhz/2rIL5PEVgn/ptJAYR0nBJ7qQLT79jsYGz7bzpfH5aA+MWAqpFvA6LsE95XQ5v19v3WB/ymV8acHvVGetT74iC5BcrgX4Fom+fbj0fv4EiUHzSK6RS9CfLEYx7n9T6wt/O8rwK0Yueb1xco0Kl31Gx3xNwz/LRLc2MRfqu9jrIGi35nF3f8eTkp8buikP//LImBi3+7v75fvfgtbQ8kCxCoacyMNjanbZEunH69rL1qv8Md84f/1uQee/UWSXKv/m4jmtxb5j72MeB7ybDM5zyvzN5nA0NLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSiqb/A49uQIPJ0GWFAAAAAElFTkSuQmCC"
-      alt="Netlify Logo"
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Plus Week 6, Homework</title>
+    <link rel="stylesheet" href="source/style.css" />
+  </head>
+
+  <body background="images/background.jpg">
+    <div class="container-fluid">
+      <h1>5 Day Forecast...</h1>
+
+      <div class="row">
+        <div class="col-6">
+          <div class="forecast">
+            <span class="date">Tuesday, January 18</span>
+            <span class="temp" id="temp">☀️ 25</span>
+            <span class="units">
+              <a href="#" id="cels">°C</a> |
+              <a href="#" id="fahr">°F</a>
+            </span>
+            <br />
+            <span class="date">Wednesday, January 19</span>
+            <span class="temp">☀️ 25°C / 77°F</span>
+            <br />
+            <span class="date">Thursday, January 20</span>
+            <span class="temp">☀️ 25°C / 77°F</span>
+            <br />
+            <span class="date">Friday, January 21</span>
+            <span class="temp">☀️ 25°C / 77°F</span>
+            <br />
+            <span class="date">Saturday, January 22</span>
+            <span class="temp">☀️ 25°C / 77°F</span>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="first">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title"><span id="firstLocation"></span></h5>
+                <p id="card-text-first">
+                  <ul class="firstInfo">
+                <li>Mostly Sunny 🌤</li>
+                <li id="firsttemp"></li>
+                <li>5:41pm (HST)</li>
+                </ul>
+                </p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <form id="search-form">
+        <input
+          type="text"
+          id = "search-input"
+          placeholder="Search your destination..."
+          autocomplete="off"
+          autofocus="on"
+        />
+        <input type="submit" value="Search" />
+      </form>
+
+
+      <div class="row"> 
+        <div><h2>Previously Viewed</h2>
+      
+          <div class="col-10">
+        <div class="previous">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><span id="prevLocation">Calgary, AB, CAN</span></h5>
+              <p id="card-text-prev">
+                <ul class="prevInfo">
+                <li>Mostly Cloudy 🌥</li>
+                <li> -18°C / 1°F</li>
+                <li id="prevday"></li>
+                </ul>
+              </p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+          </div>
+      </div> 
+   </div> 
+   
+<button class="current-button">
+  Display Current Location
+</button>
+<div class="col-8">
+<div><span id="currentLocation"></span></div>
+    </div>
+    </div>
+    </div>
+    <script src="source/app.js"></script>
   </body>
+  <div class="code-url">
+    <a href="https://github.com/jesshafeli/weather-app">Open-source code</a>, by Jessica Hafeli</div>
 </html>
