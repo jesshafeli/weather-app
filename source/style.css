@@ -5,6 +5,7 @@ body {
 }
 h1,
 h2 {
+  max-width: 600px;
   border-style: solid;
   border-width: 3px;
   border-color: hsl(267, 41%, 58%, 0.5);
@@ -23,6 +24,7 @@ h2 {
   margin-left: 640px;
 }
 .forecast {
+  max-width: 600px;
   border-style: solid;
   border-width: 3px;
   border-color: hsl(267, 41%, 58%, 0.5);
@@ -46,6 +48,7 @@ h2 {
 }
 input,
 .current-button {
+  max-width: 600px;
   background: hsla(0, 0%, 95%, 0.5);
   border-style: solid;
   border-width: 3px;
@@ -56,6 +59,7 @@ input,
   padding-right: 40px;
 }
 .current-button {
+  max-width: 600px;
   margin-top: 12px;
 }
 #currentLocation {
@@ -77,6 +81,7 @@ h5 {
 }
 .first,
 .previous {
+  max-width: 600px;
   font-size: 20px;
   margin-top: 30px;
   float: right;
@@ -88,6 +93,7 @@ h5 {
 }
 .code-url,
 .code-link {
+  max-width: 600px;
   font-size: 10px;
   font-family: "Montserrat", sans-serif;
   color: hsl(267, 41%, 58%, 0.5);
