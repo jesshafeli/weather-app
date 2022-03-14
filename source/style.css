@@ -1,5 +1,4 @@
 body {
-  background: "images/background.jpg";
   background-size: 102.5%;
   background-repeat: no-repeat;
   position: relative;
@@ -7,7 +6,6 @@ body {
 h1,
 h2,
 .container-fluid {
-  max-width: 600px;
   border-style: solid;
   border-width: 3px;
   border-color: hsl(267, 41%, 58%, 0.5);
