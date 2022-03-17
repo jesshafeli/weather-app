@@ -1,15 +1,14 @@
-//Display Relative Date/Time in First Search Card
-function formatDate(timestamp) {
-  let date = new Date(timestamp);
-  let hours = date.getHours();
+// Display Date/Time in First Card & when clicking Current Location Button
+function currentDate(currentday) {
+  let hours = currentday.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
   }
-  let minutes = date.getMinutes();
+  let minutes = currentday.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  let day = days[date.getDay()];
+
   let days = [
     "Sunday",
     "Monday",
@@ -19,8 +18,29 @@ function formatDate(timestamp) {
     "Friday",
     "Saturday",
   ];
-  return `${day}, ${hours}:${minutes}`;
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  let month = months[currentday.getMonth()];
+  let day = days[currentday.getDay()];
+  return `${day}, ${month} ${hours}:${minutes}`;
 }
+// Display Date/Time in Current Location Result Box
+let dateElement = document.querySelector("#currentday");
+let currentTime = new Date();
+dateElement.innerHTML = currentDate(currentTime);
 
 // Display Weather details in First Search Card
 function showFirst(response) {
@@ -96,31 +116,3 @@ function askLocation(event) {
 }
 let currentButton = document.querySelector(".current-button");
 currentButton.addEventListener("click", askLocation, showCurrent);
-
-// Display Date/Time when clicking Current Location Button
-function currentDate(currentday) {
-  let month = currentday.getMonth();
-  let hours = currentday.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-  let minutes = currentday.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  let day = days[currentday.getDay()];
-  return `${month}, ${day} ${hours}:${minutes}`;
-}
-// Display Date/Time in Current Location Result Box
-let dateElement = document.querySelector("#currentday");
-let currentTime = new Date();
-dateElement.innerHTML = currentDate(currentTime);
