@@ -8,7 +8,6 @@ function currentDate(currentday) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-
   let days = [
     "Sunday",
     "Monday",
@@ -35,7 +34,8 @@ function currentDate(currentday) {
 
   let month = months[currentday.getMonth()];
   let day = days[currentday.getDay()];
-  return `${day}, ${month} ${hours}:${minutes}`;
+  let date = currentday.getDate();
+  return `${day}, ${date} ${month} ${hours}:${minutes}`;
 }
 // Display Date/Time in Current Location Result Box
 let dateElement = document.querySelector("#currentday");
@@ -51,12 +51,17 @@ function showFirst(response) {
   let humidity = document.querySelector("#humid");
   let wind = document.querySelector("#wind");
   let date = document.querySelector("#date");
+  let icon = document.querySelector("#icon");
   firstCity.innerHTML = response.data.name;
   firstTemp.innerHTML = temp;
   description.innerHTML = response.data.weather[0].description;
   humidity.innerHTML = `${response.data.main.humidity}%`;
   wind.innerHTML = `${Math.round(response.data.wind.speed)} km/h`;
-  date.innerHTML = formatDate(response.data.dt * 1000);
+  date.innerHTML = currentDate(response);
+  icon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 // Display Location in 5 Day Forcast Title
