@@ -45,14 +45,16 @@ dateElement.innerHTML = currentDate(currentTime);
 // Display Weather details in First Search Card
 function showFirst(response) {
   let firstCity = document.querySelector("#firstLocation");
-  let temp = `${Math.round(response.data.main.temp)}`;
-  let firstTemp = document.querySelector("#firsttemp");
+  let temp = document.querySelectorAll("#temp", "#firsttemp");
   let description = document.querySelector("#descripton");
   let humidity = document.querySelector("#humid");
   let wind = document.querySelector("#wind");
   let icon = document.querySelector("#icon");
+
+  celsLink = response.data.main.temp;
+
   firstCity.innerHTML = response.data.name;
-  firstTemp.innerHTML = temp;
+  temp.innerHTML = Math.round(celsLink);
   description.innerHTML = response.data.weather[0].description;
   humidity.innerHTML = `${response.data.main.humidity}%`;
   wind.innerHTML = `${Math.round(response.data.wind.speed)} km/h`;
@@ -76,26 +78,29 @@ function firstSearch(event) {
   h1.innerHTML = `${searchInput.value} 5 Day Forecast...`;
 }
 
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", firstSearch);
-
 // Display C/F conversion in First Search Card & 5 Day Forecast
 function convertToFahr(event) {
   event.preventDefault();
-  var fahrElement = document.querySelector("#temp");
-  fahrElement.innerHTML = "☀️ 77";
+  let fahrElement = document.querySelectorAll("#temp", "#firsttemp");
+  let fahrcalc = (celsLink * 9) / 5 + 32;
+  fahrElement.innerHTML = Math.round(fahrcalc);
 }
 function convertToCels(event) {
   event.preventDefault();
-  var celsElement = document.querySelector("#temp");
-  celsElement.innerHTML = "☀️ 25";
+  let celsElement = document.querySelector("#temp", "#firsttemp");
+  celsElement.innerHTML = Math.round(celsLink);
 }
 
-let fahrLink = document.querySelector("#fahr");
+let celsElement = null;
+
+let fahrLink = document.querySelectorAll("#fahr");
 fahrLink.addEventListener("click", convertToFahr);
 
-let celsLink = document.querySelector("#cels");
+let celsLink = document.querySelectorAll("#cels");
 celsLink.addEventListener("click", convertToCels);
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", firstSearch);
 
 //Current Location Button
 function showLocation(position) {
@@ -118,5 +123,6 @@ function askLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(showLocation);
 }
+
 let currentButton = document.querySelector(".current-button");
 currentButton.addEventListener("click", askLocation, showCurrent);
