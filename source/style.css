@@ -10,21 +10,25 @@ h2 {
   border-radius: 5px;
   background: hsl(266, 34%, 82%, 0.5);
   padding: 12px;
-  margin-top: 10px;
   text-align: center;
   text-transform: capitalize;
   font-size: 25px;
   font-family: "Montserrat", sans-serif;
 }
+h1,
+h2,
 .forecast {
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-left: -100px;
+}
+.forecast {
   border-style: solid;
   border-width: 3px;
   border-color: hsl(267, 41%, 58%, 0.5);
   border-radius: 5px;
   background: hsla(0, 0%, 95%, 0.5);
   padding: 16px, 40px;
+  margin-bottom: 10px;
   text-align: center;
   line-height: 2.5;
   font-size: 20px;
@@ -41,14 +45,14 @@ h2 {
 }
 
 #temp {
-  margin-left: 90px;
+  margin-left: 20px;
+  margin-top: 10px;
   font-family: "Montserrat", sans-serif;
   color: black;
 }
 .units {
   font-size: 14px;
-  top: -6px;
-  position: relative;
+  margin-top: -20px;
 }
 .search:hover {
   background: hsl(267, 41%, 58%, 0.5);
@@ -64,6 +68,8 @@ input {
   padding-right: 40px;
 }
 form {
+  margin-top: 16px;
+  margin-left: 200px;
 }
 button:hover {
   background: hsl(267, 41%, 58%, 0.5);
@@ -75,8 +81,9 @@ button:hover {
   border-color: hsl(267, 41%, 58%, 0.5);
   border-radius: 5px;
   font-family: "Montserrat", sans-serif;
-  margin-top: 12px;
-  float: right;
+  padding: 8px;
+  margin-top: 20px;
+  margin-left: 200px;
 }
 #currentLocation {
   border-style: solid;
@@ -85,10 +92,13 @@ button:hover {
   border-radius: 5px;
   background: hsl(266, 34%, 82%, 0.5);
   padding: 12px;
+  float: right;
+  margin-top: 14px;
+  margin-left: 300px;
+  margin-right: 100px;
   text-align: center;
   font-size: 12px;
   font-family: "Montserrat", sans-serif;
-  float: right;
 }
 h5 {
   font-size: 25px;
@@ -104,8 +114,8 @@ h5 {
 .firstbox {
   padding: 12px;
   margin-top: 90px;
-  margin-left: 40px;
-  margin-right: 60px;
+  margin-left: 70px;
+  margin-right: 200px;
 }
 li:first-letter {
   text-transform: capitalize;
@@ -116,6 +126,7 @@ li:first-letter {
 }
 .firstdescription {
   font-size: 16px;
+  padding-top: 40px;
 }
 #firsttemp {
   font-size: 40px;

@@ -51,7 +51,7 @@ function showFirst(response) {
   let wind = document.querySelector("#wind");
   let icon = document.querySelector("#icon");
 
-  celsLink = response.data.main.temp;
+  celsTemp = response.data.main.temp;
 
   firstCity.innerHTML = response.data.name;
   temp.innerHTML = Math.round(celsLink);
@@ -81,17 +81,17 @@ function firstSearch(event) {
 // Display C/F conversion in First Search Card & 5 Day Forecast
 function convertToFahr(event) {
   event.preventDefault();
-  let fahrElement = document.querySelectorAll("#temp", "#firsttemp");
-  let fahrcalc = (celsLink * 9) / 5 + 32;
+  let fahrElement = document.querySelector("#temp");
+  let fahrcalc = (celsTemp * 9) / 5 + 32;
   fahrElement.innerHTML = Math.round(fahrcalc);
 }
 function convertToCels(event) {
   event.preventDefault();
-  let celsElement = document.querySelector("#temp", "#firsttemp");
-  celsElement.innerHTML = Math.round(celsLink);
+  let celsElement = document.querySelector("#temp");
+  celsElement.innerHTML = Math.round(celsTemp);
 }
 
-let celsElement = null;
+let celsTemp = null;
 
 let fahrLink = document.querySelector("#fahr");
 fahrLink.addEventListener("click", convertToFahr);
