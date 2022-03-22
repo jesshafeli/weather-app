@@ -93,10 +93,10 @@ function convertToCels(event) {
 
 let celsElement = null;
 
-let fahrLink = document.querySelectorAll("#fahr");
+let fahrLink = document.querySelector("#fahr");
 fahrLink.addEventListener("click", convertToFahr);
 
-let celsLink = document.querySelectorAll("#cels");
+let celsLink = document.querySelector("#cels");
 celsLink.addEventListener("click", convertToCels);
 
 let form = document.querySelector("#search-form");

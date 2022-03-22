@@ -5,7 +5,6 @@ body {
 }
 h1,
 h2 {
-  margin-left: 640px;
   border: 3px solid;
   border-color: hsl(267, 41%, 58%, 0.5);
   border-radius: 5px;
@@ -18,7 +17,6 @@ h2 {
   font-family: "Montserrat", sans-serif;
 }
 .forecast {
-  margin-left: 640px;
   margin-top: 10px;
   margin-bottom: 20px;
   border-style: solid;
@@ -44,6 +42,8 @@ h2 {
 
 #temp {
   margin-left: 90px;
+  font-family: "Montserrat", sans-serif;
+  color: black;
 }
 .units {
   font-size: 14px;
@@ -64,8 +64,6 @@ input {
   padding-right: 40px;
 }
 form {
-  margin-top: -300px;
-  margin-left: 175px;
 }
 button:hover {
   background: hsl(267, 41%, 58%, 0.5);
@@ -87,8 +85,6 @@ button:hover {
   border-radius: 5px;
   background: hsl(266, 34%, 82%, 0.5);
   padding: 12px;
-  margin-top: 60px;
-  margin-right: -218px;
   text-align: center;
   font-size: 12px;
   font-family: "Montserrat", sans-serif;
@@ -104,12 +100,12 @@ h5 {
   border: 2px solid;
   border-color: hsl(267, 41%, 58%, 0.5);
   border-radius: 5px;
-  max-block-size: 250px;
 }
 .firstbox {
-  margin-top: -575px;
-  margin-left: 100px;
   padding: 12px;
+  margin-top: 90px;
+  margin-left: 40px;
+  margin-right: 60px;
 }
 li:first-letter {
   text-transform: capitalize;
