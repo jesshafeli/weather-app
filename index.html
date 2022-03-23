@@ -27,25 +27,26 @@
         <div class="col-8">
           <div class="firstbox">
             <div class="row">
-              <div class="col-6">
+              <div class="col-4">
                 <h5><span id="firstLocation"></span></h5>
 
                 <div id="firsttemp">
-                  <strong id="temp"></strong> <span class="units">
-                      <a href="#" id="cels" class="active">°C</a> |
-                      <a href="#" id="fahr" class="active">°F</a>
+                  <span><img src="" id="icon" alt="condition" /></span>
+                  <span><strong id="temp"></strong></span>
+                  <span class="units">
+                    <a href="#" id="cels" class="active">°C</a> |
+                    <a href="#" id="fahr" class="active">°F</a>
+                  </span>
                 </div>
-                      <img src="" id="icon" alt="condition" />
-                    </span>
               </div>
 
-              <div class="col-6">
+              <div class="col-8">
                 <div class="float-right">
                   <ul class="firstdescription">
                     <li id="descripton"></li>
                     <li>Humidity: <span id="humid"></span></li>
                     <li>Wind: <span id="wind"></span></li>
-                    <li id="currentday"></li>
+                    <li>Last Updated: <span id="currentday"></span></li>
                   </ul>
                 </div>
               </div>
@@ -81,24 +82,11 @@
           <div class="row">
             <div class="col-12">
               <div class="forecast">
-                <span class="date">Tuesday, January 18</span>
-                <span id="temp">☀️ 25</span>
-                <span class="units">
-                  <a href="#" id="cels" class="active">°C</a> |
-                  <a href="#" id="fahr" class="active">°F</a>
-                </span>
+                <span class="forecast-date">Tuesday, January 18</span>
+                <span class="forecast-icon">☀️</span>
+                <span class="forcast-temp-max">25°</span> |
+                <span class="forcast-temp-min">12°</span>
                 <br />
-                <span class="date">Wednesday, January 19</span>
-                <span class="temp">☀️ 25°C / 77°F</span>
-                <br />
-                <span class="date">Thursday, January 20</span>
-                <span class="temp">☀️ 25°C / 77°F</span>
-                <br />
-                <span class="date">Friday, January 21</span>
-                <span class="temp">☀️ 25°C / 77°F</span>
-                <br />
-                <span class="date">Saturday, January 22</span>
-                <span class="temp">☀️ 25°C / 77°F</span>
               </div>
             </div>
           </div>

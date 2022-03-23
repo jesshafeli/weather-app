@@ -21,6 +21,58 @@ h2,
   margin-top: 10px;
   margin-left: -100px;
 }
+.firstbox,
+.previous {
+  font-size: 20px;
+  border: 2px solid;
+  border-color: hsl(267, 41%, 58%, 0.5);
+  border-radius: 5px;
+}
+.firstbox {
+  padding: 12px;
+  margin-top: 90px;
+  margin-left: 70px;
+  margin-right: 200px;
+}
+#description {
+  font-style: italic;
+}
+li:first-letter {
+  text-transform: capitalize;
+}
+.active {
+  color: black;
+  text-decoration: none;
+}
+.active:hover {
+  text-decoration: none;
+  color: hsl(267, 41%, 58%, 0.5);
+}
+#icon {
+  margin-left: 100px;
+  margin-top: -60px;
+  margin-bottom: -100px;
+}
+#temp {
+  font-size: 50px;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+}
+.units {
+  font-size: 14px;
+}
+.firstdescription,
+.prevInfo {
+  list-style: none;
+}
+.firstdescription {
+  font-size: 16px;
+  padding-top: 40px;
+}
+#firstcels,
+#firstfahr {
+  font-size: 18px;
+}
 .forecast {
   border-style: solid;
   border-width: 3px;
@@ -34,25 +86,14 @@ h2,
   font-size: 20px;
   font-family: "Montserrat", sans-serif;
 }
-.active {
-  color: black;
-  text-decoration: none;
-}
-
-.active:hover {
-  text-decoration: none;
-  color: hsl(267, 41%, 58%, 0.5);
-}
-
-#temp {
-  margin-left: 20px;
-  margin-top: 10px;
+h5 {
+  font-size: 25px;
   font-family: "Montserrat", sans-serif;
-  color: black;
 }
-.units {
-  font-size: 14px;
-  margin-top: -20px;
+
+.previous {
+  float: right;
+  padding: 16px;
 }
 .search:hover {
   background: hsl(267, 41%, 58%, 0.5);
@@ -99,46 +140,6 @@ button:hover {
   text-align: center;
   font-size: 12px;
   font-family: "Montserrat", sans-serif;
-}
-h5 {
-  font-size: 25px;
-  font-family: "Montserrat", sans-serif;
-}
-.firstbox,
-.previous {
-  font-size: 20px;
-  border: 2px solid;
-  border-color: hsl(267, 41%, 58%, 0.5);
-  border-radius: 5px;
-}
-.firstbox {
-  padding: 12px;
-  margin-top: 90px;
-  margin-left: 70px;
-  margin-right: 200px;
-}
-li:first-letter {
-  text-transform: capitalize;
-}
-.firstdescription,
-.prevInfo {
-  list-style: none;
-}
-.firstdescription {
-  font-size: 16px;
-  padding-top: 40px;
-}
-#firsttemp {
-  font-size: 40px;
-  font-weight: bold;
-}
-#firstcels,
-#firstfahr {
-  font-size: 18px;
-}
-.previous {
-  float: right;
-  padding: 16px;
 }
 .code-url,
 .code-link {
