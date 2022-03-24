@@ -1,4 +1,28 @@
-// Display Date/Time in First Card & when clicking Current Location Button
+// Display C/F conversion in First Search Card
+function convertToFahr(event) {
+  event.preventDefault();
+  let fahrElement = document.querySelector("#temp");
+  let fahrcalc = (celsTemp * 9) / 5 + 32;
+  fahrElement.innerHTML = Math.round(fahrcalc);
+}
+function convertToCels(event) {
+  event.preventDefault();
+  let celsElement = document.querySelector("#temp");
+  celsElement.innerHTML = Math.round(celsTemp);
+}
+
+let celsTemp = null;
+
+let fahrLink = document.querySelector("#fahr");
+fahrLink.addEventListener("click", convertToFahr);
+
+let celsLink = document.querySelector("#cels");
+celsLink.addEventListener("click", convertToCels);
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", firstSearch);
+
+// Display Date/Time in First Card
 function currentDate(currentday) {
   let hours = currentday.getHours();
   if (hours < 10) {
@@ -37,10 +61,6 @@ function currentDate(currentday) {
   let date = currentday.getDate();
   return `${day}, ${date} ${month} ${hours}:${minutes}`;
 }
-// Display Date/Time in Current Location Result Box
-let dateElement = document.querySelector("#currentday");
-let currentTime = new Date();
-dateElement.innerHTML = currentDate(currentTime);
 
 // Display Weather details in First Search Card
 function showFirst(response) {
@@ -78,29 +98,30 @@ function firstSearch(event) {
   h1.innerHTML = `${searchInput.value} 5 Day Forecast...`;
 }
 
-// Display C/F conversion in First Search Card & 5 Day Forecast
-function convertToFahr(event) {
-  event.preventDefault();
-  let fahrElement = document.querySelector("#temp");
-  let fahrcalc = (celsTemp * 9) / 5 + 32;
-  fahrElement.innerHTML = Math.round(fahrcalc);
+// Display Forecast Information
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class ="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-12">
+              <div class="forecast" id="forecast">
+                <span class="forecast-date">${day}, January 18</span>
+                <span class="forecast-icon">☀️</span>
+                <span class="forcast-temp-max">25°</span> |
+                <span class="forcast-temp-min">12°</span>
+                <br />
+              </div>
+            </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
-function convertToCels(event) {
-  event.preventDefault();
-  let celsElement = document.querySelector("#temp");
-  celsElement.innerHTML = Math.round(celsTemp);
-}
 
-let celsTemp = null;
-
-let fahrLink = document.querySelector("#fahr");
-fahrLink.addEventListener("click", convertToFahr);
-
-let celsLink = document.querySelector("#cels");
-celsLink.addEventListener("click", convertToCels);
-
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", firstSearch);
+displayForecast();
 
 //Current Location Button
 function showLocation(position) {
@@ -126,3 +147,8 @@ function askLocation(event) {
 
 let currentButton = document.querySelector(".current-button");
 currentButton.addEventListener("click", askLocation, showCurrent);
+
+// Display Date/Time after Current Location Button click
+let dateElement = document.querySelector("#currentday");
+let currentTime = new Date();
+dateElement.innerHTML = currentDate(currentTime);
