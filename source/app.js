@@ -83,6 +83,8 @@ function showFirst(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   icon.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 // Display Location in 5 Day Forcast Title
@@ -98,30 +100,56 @@ function firstSearch(event) {
   h1.innerHTML = `${searchInput.value} 5 Day Forecast...`;
 }
 
+// Display Weather details in Forecast
+function getForecast(coordinates) {
+  let apiKey = "8eeaa6b1b1ee1f6335457d45a5b3a39f";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 // Display Forecast Information
-function displayForecast() {
+function displayForecast(response) {
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class ="row">`;
-  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col-12">
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col-12">
               <div class="forecast" id="forecast">
-                <span class="forecast-date">${day}, January 18</span>
-                <span class="forecast-icon">☀️</span>
-                <span class="forcast-temp-max">25°</span> |
-                <span class="forcast-temp-min">12°</span>
+                <span class="forecast-date">${formatForecastDay(
+                  forecastDay.dt
+                )}</span> ${index}
+                <span class="forecast-icon"><img src=
+    "http://openweathermap.org/img/wn/${
+      forecastDay.weather[0].icon
+    }@2x.png" alt=""</span>
+                <span class="forcast-temp-min">${Math.round(
+                  forecastDay.temp.min
+                )}°</span> |
+                <span class="forcast-temp-max">${Math.round(
+                  forecastDay.temp.max
+                )}°°</span>
                 <br />
               </div>
             </div>`;
+    }
   });
   forecastHTML = forecastHTML + `</div>`;
-  forecastElement.innerHTML = forecastHTML;
+  forecastElement.innerHTML = displayForecast;
 }
 
-displayForecast();
+//Customized Display from Forecast API
+function formatForecastDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
 
 //Current Location Button
 function showLocation(position) {
@@ -140,6 +168,7 @@ function showCurrent(response) {
   let buttonDisplay = document.querySelector("#currentLocation");
   buttonDisplay.innerHTML = message;
 }
+
 function askLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(showLocation);
