@@ -132,7 +132,7 @@ function displayForecast(response) {
                 )}°</span> |
                 <span class="forcast-temp-max">${Math.round(
                   forecastDay.temp.max
-                )}°°</span>
+                )}°</span>
                 <br />
               </div>
             </div>`;
