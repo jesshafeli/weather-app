@@ -3,8 +3,7 @@ body {
   background-repeat: no-repeat;
   position: relative;
 }
-h1,
-h2 {
+h1 {
   border: 3px solid;
   border-color: hsl(267, 41%, 58%, 0.5);
   border-radius: 5px;
@@ -16,19 +15,15 @@ h2 {
   font-family: "Montserrat", sans-serif;
 }
 h1,
-h2,
 .forecast {
   margin-top: 10px;
   margin-left: -150px;
 }
-.firstbox,
-.previous {
+.firstbox {
   font-size: 20px;
   border: 2px solid;
   border-color: hsl(267, 41%, 58%, 0.5);
   border-radius: 5px;
-}
-.firstbox {
   padding: 12px;
   margin-top: 90px;
   margin-left: 70px;
@@ -61,11 +56,8 @@ li:first-letter {
 .units {
   font-size: 14px;
 }
-.firstdescription,
-.prevInfo {
-  list-style: none;
-}
 .firstdescription {
+  list-style: none;
   font-size: 16px;
   padding-top: 40px;
 }
@@ -89,11 +81,6 @@ li:first-letter {
 h5 {
   font-size: 25px;
   font-family: "Montserrat", sans-serif;
-}
-
-.previous {
-  float: right;
-  padding: 16px;
 }
 .search:hover {
   background: hsl(267, 41%, 58%, 0.5);

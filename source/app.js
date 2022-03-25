@@ -22,6 +22,8 @@ celsLink.addEventListener("click", convertToCels);
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", firstSearch);
 
+search("Calgary");
+
 // Display Date/Time in First Card
 function currentDate(currentday) {
   let hours = currentday.getHours();
