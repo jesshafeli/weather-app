@@ -22,8 +22,6 @@ celsLink.addEventListener("click", convertToCels);
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", firstSearch);
 
-search("Calgary");
-
 // Display Date/Time in First Card
 function currentDate(currentday) {
   let hours = currentday.getHours();
@@ -168,7 +166,7 @@ function showCurrent(response) {
   let city = response.data.name;
   let message = `You are currently in ${city}, today is ${currentTime} and it is ${temp}°C outside.`;
   let buttonDisplay = document.querySelector("#currentLocation");
-  buttonDisplay.innerHTML = message;
+  buttonDisplay.innerHTML = message.style.display = "block";
 }
 
 function askLocation(event) {
@@ -176,7 +174,7 @@ function askLocation(event) {
   navigator.geolocation.getCurrentPosition(showLocation);
 }
 
-let currentButton = document.querySelector(".current-button");
+let currentButton = document.querySelector("#currentButton");
 currentButton.addEventListener("click", askLocation, showCurrent);
 
 // Display Date/Time after Current Location Button click

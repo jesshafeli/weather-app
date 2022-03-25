@@ -99,10 +99,10 @@ form {
   margin-top: 16px;
   margin-left: 200px;
 }
-button:hover {
+#currentButton:hover {
   background: hsl(267, 41%, 58%, 0.5);
 }
-.current-button {
+#currentButton {
   background: hsla(0, 0%, 95%, 0.5);
   border-style: solid;
   border-width: 3px;
