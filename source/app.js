@@ -139,7 +139,7 @@ function displayForecast(response) {
     }
   });
   forecastHTML = forecastHTML + `</div>`;
-  forecastElement.innerHTML = displayForecast;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 //Customized Display from Forecast API
