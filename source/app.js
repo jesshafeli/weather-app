@@ -25,13 +25,11 @@ form.addEventListener("submit", firstSearch);
 // Display Date/Time in First Card
 function currentDate(currentday) {
   let hours = currentday.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-  let minutes = currentday.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
+  hours = now.toLocaleString("en-US", {
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true,
+  });
   let days = [
     "Sunday",
     "Monday",
@@ -59,7 +57,7 @@ function currentDate(currentday) {
   let month = months[currentday.getMonth()];
   let day = days[currentday.getDay()];
   let date = currentday.getDate();
-  return `${day}, ${date} ${month} ${hours}:${minutes}`;
+  return `${day}, ${date} ${month} ${hours}`;
 }
 
 // Display Weather details in First Search Card
