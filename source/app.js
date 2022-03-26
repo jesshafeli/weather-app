@@ -182,3 +182,5 @@ currentButton.addEventListener("click", askLocation, showCurrent);
 let dateElement = document.querySelector("#currentday");
 let currentTime = new Date();
 dateElement.innerHTML = currentDate(currentTime);
+
+firstSearch("Calgary");
