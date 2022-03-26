@@ -166,7 +166,8 @@ function showCurrent(response) {
   let city = response.data.name;
   let message = `You are currently in ${city}, today is ${currentTime} and it is ${temp}°C outside.`;
   let buttonDisplay = document.querySelector("#currentLocation");
-  buttonDisplay.innerHTML = message.style.display = "block";
+  buttonDisplay.style.display = "block";
+  buttonDisplay.innerHTML = message;
 }
 
 function askLocation(event) {
