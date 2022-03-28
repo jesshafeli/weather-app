@@ -19,9 +19,6 @@ fahrLink.addEventListener("click", convertToFahr);
 let celsLink = document.querySelector("#cels");
 celsLink.addEventListener("click", convertToCels);
 
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", firstSearch);
-
 // Display Date/Time in First Card
 function currentDate(currentday) {
   let hours = currentday.getHours();
@@ -86,14 +83,23 @@ function showFirst(response) {
 }
 
 // Display Location in 5 Day Forcast Title
-function firstSearch(city) {
+
+function handleSubmit(event) {
+  event.preventDefault();
   let searchInput = document.querySelector("#search-input");
+  firstSearch(searchInput.value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+function firstSearch(city) {
   let units = "metric";
   let apiKey = "8eeaa6b1b1ee1f6335457d45a5b3a39f";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showFirst);
   let h1 = document.querySelector("h1");
-  h1.innerHTML = `${searchInput.value} 5 Day Forecast...`;
+  h1.innerHTML = `${city} 5 Day Forecast...`;
 }
 
 // Display Weather details in Forecast
@@ -114,7 +120,7 @@ function displayForecast(response) {
     if (index < 6) {
       forecastHTML =
         forecastHTML +
-        `<div class="col-4">
+        `<div class="col-12">
               <div class="forecast" id="forecast">
                 <span class="forecast-date">${formatForecastDay(
                   forecastDay.dt
