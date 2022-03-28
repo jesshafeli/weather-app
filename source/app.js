@@ -11,8 +11,6 @@ function convertToCels(event) {
   celsElement.innerHTML = Math.round(celsTemp);
 }
 
-let celsTemp = null;
-
 let fahrLink = document.querySelector("#fahr");
 fahrLink.addEventListener("click", convertToFahr);
 

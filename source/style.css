@@ -15,7 +15,7 @@ h1 {
   font-family: "Montserrat", sans-serif;
 }
 h1,
-#forecast {
+.forecast {
   margin-top: 10px;
   margin-right: 30px;
 }
@@ -26,6 +26,7 @@ h1,
   border-radius: 5px;
   background: hsla(0, 0%, 95%, 0.5);
   margin-bottom: 10px;
+  padding: none;
   text-align: center;
   line-height: 2.5;
   font-size: 20px;
