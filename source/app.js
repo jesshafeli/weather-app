@@ -25,7 +25,7 @@ form.addEventListener("submit", firstSearch);
 // Display Date/Time in First Card
 function currentDate(currentday) {
   let hours = currentday.getHours();
-  hours = now.toLocaleString("en-US", {
+  hours = currentday.toLocaleString("en-US", {
     hour: "numeric",
     minute: "numeric",
     hour12: true,
@@ -86,11 +86,9 @@ function showFirst(response) {
 }
 
 // Display Location in 5 Day Forcast Title
-function firstSearch(event) {
-  event.preventDefault();
+function firstSearch(city) {
   let searchInput = document.querySelector("#search-input");
   let units = "metric";
-  let city = searchInput.value;
   let apiKey = "8eeaa6b1b1ee1f6335457d45a5b3a39f";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showFirst);
@@ -110,17 +108,17 @@ function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
-  let forecastHTML = `<div class ="row">`;
+  let forecastHTML = "";
 
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
       forecastHTML =
         forecastHTML +
-        `<div class="col-12">
+        `<div class="col-4">
               <div class="forecast" id="forecast">
                 <span class="forecast-date">${formatForecastDay(
                   forecastDay.dt
-                )}</span> ${index}
+                )}</span>
                 <span class="forecast-icon"><img src=
     "http://openweathermap.org/img/wn/${
       forecastDay.weather[0].icon
