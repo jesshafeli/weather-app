@@ -59,6 +59,7 @@ function currentDate(currentday) {
 function showFirst(response) {
   let firstCity = document.querySelector("#firstLocation");
   let temp = document.querySelectorAll("#temp", "#firsttemp");
+  let celsElement = document.querySelector("#temp");
   let description = document.querySelector("#descripton");
   let humidity = document.querySelector("#humid");
   let wind = document.querySelector("#wind");
@@ -68,6 +69,7 @@ function showFirst(response) {
 
   firstCity.innerHTML = response.data.name;
   temp.innerHTML = Math.round(celsLink);
+  celsElement.innerHTML = Math.round(celsTemp);
   description.innerHTML = response.data.weather[0].description;
   humidity.innerHTML = `${response.data.main.humidity}%`;
   wind.innerHTML = `${Math.round(response.data.wind.speed)} km/h`;

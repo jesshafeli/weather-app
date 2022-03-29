@@ -23,27 +23,29 @@
 
   <body background="source/images/background.jpg">
     <div class="container-fluid">
+      
       <div class="row">
         <div class="col-8">
           <div class="firstbox">
+            
             <div class="row">
               <div class="col-4">
                 <h5><span id="firstLocation"></span></h5>
-
-                <div id="firsttemp">
+                  <div id="firsttemp">
                   <span><img src="" id="icon" alt="condition" /></span>
-                  <span><strong id="temp"></strong></span>
+                  <div><strong id="temp"></strong>
                   <span class="units">
                     <a href="#" id="cels" class="active">°C</a> |
                     <a href="#" id="fahr" class="active">°F</a>
                   </span>
+                  </div>
                 </div>
               </div>
 
               <div class="col-8">
                 <div class="float-right">
                   <ul class="firstdescription">
-                    <li id="descripton"></li>
+                    <em><li id="descripton"></li></em>
                     <li>Humidity: <span id="humid"></span></li>
                     <li>Wind: <span id="wind"></span></li>
                     <li>Last Updated: <span id="currentday"></span></li>
@@ -69,9 +71,10 @@
           </div>
 
           <div class="row">
-            <div class="col-8">
-              <button id="currentButton">My Location 📍</button>
+              <div class="col-6">
+                <button id="currentButton">My Location 📍</button>
               <div id="currentLocation" style="display: none"></div>
+              
             </div>
           </div>
         </div>

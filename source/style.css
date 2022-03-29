@@ -1,13 +1,12 @@
 body {
-  background-size: 102.5%;
-  background-repeat: no-repeat;
-  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat center fixed;
 }
 h1 {
   border: 3px solid;
   border-color: hsl(267, 41%, 58%, 0.5);
   border-radius: 5px;
-  background: hsl(266, 34%, 82%, 0.5);
+  background: hsl(183, 9%, 70%);
   padding: 12px;
   text-align: center;
   text-transform: capitalize;
@@ -17,14 +16,14 @@ h1 {
 h1,
 .forecast {
   margin-top: 10px;
-  margin-right: 30px;
+  margin-right: 75px;
 }
 .forecast {
   border-style: solid;
   border-width: 3px;
   border-color: hsl(267, 41%, 58%, 0.5);
   border-radius: 5px;
-  background: hsla(0, 0%, 95%, 0.5);
+  background: hsla(0, 0%, 75%, 0.5);
   margin-bottom: 10px;
   padding: none;
   text-align: center;
@@ -34,16 +33,13 @@ h1,
 }
 .firstbox {
   font-size: 20px;
-  border: 2px solid;
+  border: 5px solid;
   border-color: hsl(267, 41%, 58%, 0.5);
   border-radius: 5px;
   padding: 12px;
   margin-top: 90px;
-  margin-left: 70px;
-  margin-right: 200px;
-}
-#description {
-  font-style: italic;
+  margin-left: 150px;
+  margin-right: 100px;
 }
 li:first-letter {
   text-transform: capitalize;
@@ -55,6 +51,9 @@ li:first-letter {
 .active:hover {
   text-decoration: none;
   color: hsl(267, 41%, 58%, 0.5);
+}
+#descripton {
+  font-weight: bold;
 }
 #icon {
   margin-left: 100px;
@@ -68,11 +67,13 @@ li:first-letter {
 }
 .units {
   font-size: 14px;
+  padding-left: 5px;
+  display: inline;
 }
 .firstdescription {
   list-style: none;
   font-size: 16px;
-  padding-top: 40px;
+  padding-top: 25px;
 }
 #firstcels,
 #firstfahr {
@@ -97,7 +98,7 @@ input {
 }
 form {
   margin-top: 16px;
-  margin-left: 200px;
+  margin-left: 152px;
 }
 #currentButton:hover {
   background: hsl(267, 41%, 58%, 0.5);
@@ -111,7 +112,6 @@ form {
   font-family: "Montserrat", sans-serif;
   padding: 8px;
   margin-top: 20px;
-  margin-left: 200px;
 }
 #currentLocation {
   border-style: solid;
@@ -120,13 +120,11 @@ form {
   border-radius: 5px;
   background: hsl(266, 34%, 82%, 0.5);
   padding: 12px;
-  float: right;
   margin-top: 14px;
-  margin-left: 300px;
-  margin-right: 100px;
   text-align: center;
   font-size: 12px;
   font-family: "Montserrat", sans-serif;
+  float: right;
 }
 .code-url,
 .code-link {
