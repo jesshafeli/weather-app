@@ -1,10 +1,10 @@
 body {
-  background-size: cover;
+  background-size: 102.5%;
   background-repeat: no-repeat center fixed;
 }
 h1 {
   border: 3px solid;
-  border-color: hsl(267, 41%, 58%, 0.5);
+  border-color: #45585f;
   border-radius: 5px;
   background: hsl(183, 9%, 70%);
   padding: 12px;
@@ -21,7 +21,7 @@ h1,
 .forecast {
   border-style: solid;
   border-width: 3px;
-  border-color: hsl(267, 41%, 58%, 0.5);
+  border-color: #45585f;
   border-radius: 5px;
   background: hsla(0, 0%, 75%, 0.5);
   margin-bottom: 10px;
@@ -34,7 +34,7 @@ h1,
 .firstbox {
   font-size: 20px;
   border: 5px solid;
-  border-color: hsl(267, 41%, 58%, 0.5);
+  border-color: #91a5a3;
   border-radius: 5px;
   padding: 12px;
   margin-top: 90px;
@@ -50,7 +50,7 @@ li:first-letter {
 }
 .active:hover {
   text-decoration: none;
-  color: hsl(267, 41%, 58%, 0.5);
+  color: #91a5a3;
 }
 #descripton {
   font-weight: bold;
@@ -84,13 +84,13 @@ h5 {
   font-family: "Montserrat", sans-serif;
 }
 .search:hover {
-  background: hsl(267, 41%, 58%, 0.5);
+  background: #91a5a3;
 }
 input {
   background: hsla(0, 0%, 95%, 0.5);
   border-style: solid;
   border-width: 3px;
-  border-color: hsl(267, 41%, 58%, 0.5);
+  border-color: #91a5a3;
   border-radius: 5px;
   font-family: "Montserrat", sans-serif;
   padding-left: 40px;
@@ -101,30 +101,32 @@ form {
   margin-left: 152px;
 }
 #currentButton:hover {
-  background: hsl(267, 41%, 58%, 0.5);
+  background: #91a5a3;
 }
 #currentButton {
   background: hsla(0, 0%, 95%, 0.5);
   border-style: solid;
   border-width: 3px;
-  border-color: hsl(267, 41%, 58%, 0.5);
+  border-color: #91a5a3;
   border-radius: 5px;
   font-family: "Montserrat", sans-serif;
-  padding: 8px;
-  margin-top: 20px;
+  padding: 5px;
+  margin-top: 15px;
+  float: right;
+  margin-right: -37px;
 }
 #currentLocation {
   border-style: solid;
   border-width: 3px;
-  border-color: hsl(267, 41%, 58%, 0.5);
+  border-color: #91a5a3;
   border-radius: 5px;
-  background: hsl(266, 34%, 82%, 0.5);
-  padding: 12px;
-  margin-top: 14px;
-  text-align: center;
-  font-size: 12px;
+  background: hsla(0, 0%, 75%, 0.5);
+  font-size: 14px;
   font-family: "Montserrat", sans-serif;
-  float: right;
+  padding: 12px;
+  margin-top: 75px;
+  max-height: 500px;
+  text-align: center;
 }
 .code-url,
 .code-link {
