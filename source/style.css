@@ -9,7 +9,7 @@ body {
 }
 #wrapper {
   border: none;
-  width: max-content;
+  min-width: 1200px;
   margin: auto;
 }
 h1 {
